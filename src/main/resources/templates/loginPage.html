@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<script type= "text/javascript">
+function login()
+{
+	var name = document.getElementById('name').value;
+	var password = document.getElementById('pass').value;
+	document.location.href = "http://localhost:8080/login?name="+name+"&password="+password;
+}
+</script>
+<div class="center"><h1>Добро пожаловать</h1>
+    <div>
+        <form name="test" method="post" action="input1.php">
+            <p><b>Имя:</b><br>
+                <input id="name" type="text" size="40">
+            </p>
+            <p><b>Пароль:</b><br>
+                <input id="pass" type="password" size="40">
+            </p>
+        </form>
+    </div>
+    <button onclick="login()">Войти</button>
+</div>
+</body>
+</html>
